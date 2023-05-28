@@ -24,6 +24,12 @@ public class Response<T> {
         return response;
     }
 
+    public static <T> Response<T> success(T data) {
+        Response<T> response = success();
+        response.setData(data);
+        return response;
+    }
+
     public static <T> Response<T> fail(Integer code, String msg, T data) {
         Response<T> response = fail();
         response.setCode(code);
