@@ -25,6 +25,8 @@
 		<maven.compiler.target>8</maven.compiler.target>
 		<spring-cloud.version>2021.0.7</spring-cloud.version>
 		<lombok.version>1.18.22</lombok.version>
+		<mybatis-plus.version>3.5.1</mybatis-plus.version>
+		<mysql-connector.version>5.1.6</mysql-connector.version>
 	</properties>
 
 	<dependencyManagement>
@@ -75,6 +77,18 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-boot-starter</artifactId>
+			<version>${mybatis-plus.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql-connector.version}</version>
 		</dependency>
 	</dependencies>
 
