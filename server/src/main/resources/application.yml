@@ -8,3 +8,7 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/huimu_flowerplant?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
     password: Rdis2fun
+
+  jackson:
+    serialization:
+      write-dates-as-timestamps: true
