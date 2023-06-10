@@ -26,7 +26,7 @@
 		<spring-cloud.version>2021.0.7</spring-cloud.version>
 		<lombok.version>1.18.22</lombok.version>
 		<mybatis-plus.version>3.5.1</mybatis-plus.version>
-		<mysql-connector.version>5.1.6</mysql-connector.version>
+		<mysql-connector.version>5.1.47</mysql-connector.version>
 	</properties>
 
 	<dependencyManagement>
