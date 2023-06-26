@@ -38,7 +38,7 @@ public class Response<T> {
         return response;
     }
 
-    private static <T> Response<T> success() {
+    public static <T> Response<T> success() {
         Response<T> response = new Response<>();
         response.setSuccess(true);
         response.setCode(0);
