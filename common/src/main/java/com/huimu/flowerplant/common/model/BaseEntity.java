@@ -11,9 +11,9 @@ import java.util.Date;
 @ToString
 public class BaseEntity {
 
-    private Integer createdUserId;
+    private Long createdUserId;
 
-    private Integer updatedUserId;
+    private Long updatedUserId;
 
     private Date createdTime;
 

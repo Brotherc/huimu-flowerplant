@@ -1,6 +1,7 @@
 package com.huimu.flowerplant.user.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.huimu.flowerplant.common.util.UidUtil;
 import com.huimu.flowerplant.common.vo.PageVo;
 import com.huimu.flowerplant.common.web.Response;
 import com.huimu.flowerplant.user.model.entity.User;
@@ -18,7 +19,7 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/{id}")
-    public Response<User> getUserById(@PathVariable Integer id) {
+    public Response<User> getUserById(@PathVariable Long id) {
         return Response.success(userService.getUserById(id));
     }
 
@@ -30,12 +31,14 @@ public class UserController {
     @PostMapping("/addUser")
     public Response<Void> addUser() {
         User user = new User();
+        Long uid = UidUtil.nextId();
+        user.setUserId(uid);
         user.setMobile("asdasd");
         user.setUserType(1);
         user.setUsername("lcs");
         user.setPassword("asdsadasdas");
-        user.setCreatedUserId(123);
-        user.setUpdatedUserId(123);
+        user.setCreatedUserId(uid);
+        user.setUpdatedUserId(uid);
         user.setCreatedTime(new Date());
         user.setUpdatedTime(new Date());
         userService.addUser(user);

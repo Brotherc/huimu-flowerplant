@@ -15,7 +15,7 @@ public class UserService extends ServiceImpl<UserMapper, User> {
     @Autowired
     private UserMapper userMapper;
 
-    public User getUserById(Integer id) {
+    public User getUserById(Long id) {
         return userMapper.selectById(id);
     }
 
